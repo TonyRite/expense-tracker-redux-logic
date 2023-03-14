@@ -16,7 +16,7 @@ export const AddTransaction = () => {
     const newTransaction = {
       id: Math.floor(Math.random() * 100000000),
       text,
-      amount: +amount!,
+      amount: +amount!
     };
     dispatch(addTransaction(newTransaction));
     setAmount(0);
