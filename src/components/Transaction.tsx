@@ -1,9 +1,14 @@
-import React from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteTransaction } from '../actions/actionTypes';
 
-
-export default function Transaction({transaction}) {
+interface TransactionProp {
+  transaction:{
+        id: number;
+        amount: number;
+        text: string;
+  }
+}
+export default function Transaction({transaction}:TransactionProp) {
     const dispatch = useDispatch();
     const sign = transaction.amount < 0 ? '-' : '+';
 
