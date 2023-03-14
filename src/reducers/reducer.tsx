@@ -1,3 +1,5 @@
+import { Transaction } from "../components/Balance";
+
 const initialState = {
     transactions:[
         { id: 1, text: 'Love', amount: 2000 },
@@ -8,7 +10,7 @@ const initialState = {
 }
 
 
-function reducer(state=initialState, action){
+function reducer(state=initialState, action: { type: string; payload: number|Transaction; }){
     switch(action.type) {
         case 'DELETE_TRANSACTION':
             return {
@@ -16,6 +18,7 @@ function reducer(state=initialState, action){
                 transactions:state.transactions.filter(transaction=>transaction.id!==action.payload)
             }
         case 'ADD_TRANSACTION':
+    // try uisng case narrowing ili acion.payload ya chini iwe Transaction type ,ambayo nimeimport hapo juu
             return {
                 ...state,
                 transactions:[action.payload,...state.transactions]
