@@ -8,7 +8,7 @@ const initialState = {
   ],
 };
 
-function reducer(state = initialState, action: { type: string; payload: number; }) {
+function reducer(state = initialState, action: { type: string; payload: any; }) {
   switch (action.type) {
     case "DELETE_TRANSACTION":
       return {

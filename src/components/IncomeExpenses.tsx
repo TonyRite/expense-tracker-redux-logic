@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
-import { Transaction } from './Balance';
+import { TransactionType } from './Balance';
 
 export const IncomeExpenses = () => {
-  const transactions  = useSelector((state:{transactions:Transaction[]})=>state.transactions);
+  const transactions  = useSelector((state:{transactions:TransactionType[]})=>state.transactions);
   const amounts = transactions.map(transaction => transaction.amount);
   const income = amounts
   .filter(item => item > 0)

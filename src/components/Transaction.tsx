@@ -1,4 +1,3 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteTransaction } from "../actions/actionTypes";
 
@@ -28,4 +27,5 @@ export default function Transaction({ transaction }: TransactionProps) {
         </button>
       </li>
     </div>
-  );
+  )
+}
