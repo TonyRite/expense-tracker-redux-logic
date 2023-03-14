@@ -29,4 +29,3 @@ export default function Transaction({ transaction }: TransactionProps) {
       </li>
     </div>
   );
-}
